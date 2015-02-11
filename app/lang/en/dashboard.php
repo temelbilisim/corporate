@@ -1,5 +1,6 @@
 <?php
 
 return array(
-    "title" => "Dashboard"
+    "title" => "Dashboard",
+    "description" => "Visitor statistics and details, monitor your site"
 );

@@ -40,6 +40,19 @@ class UserController extends \BaseController {
 	}
 
 	/**
+	 * Logout from user
+	 * GET /admin/logout
+	 *
+	 * @return Redirect
+	 */
+	public function logout()
+	{
+		Auth::logout();
+
+		return Redirect::route("homepage")->with('success', Lang::get("user.loggedout"));
+	}
+
+	/**
 	 * Display a listing of the resource.
 	 * GET /user
 	 *

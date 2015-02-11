@@ -24,6 +24,8 @@ Route::group(array("prefix" => "admin"), function(){
 
     Route::group(array("before" => "auth"), function(){
         Route::get("/", array("as" => "admin.dashboard", "uses" => "DashboardController@index"));
+
+        Route::get("logout", array("as" => "admin.logout", "uses" => "UserController@logout"));
     });
 
 });
